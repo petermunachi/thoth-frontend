@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+html{
+  box-sizing: border-box;
+}
+
+.custom-secondary-btn {
+  color: #0e0e3c !important;
+  background-color: #fff;
+}
+
+.center-div {
+  margin: 0 auto;
+}
+
+.custom-primary-btn {
+  color: white !important;
+  background-color: rgb(248, 112, 85);
+}
+
+.custom-primary-btn, .custom-secondary-btn {
+  padding: .9rem 2rem .6rem 2rem;
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform .3s;
+  
+}
+
+.custom-primary-btn:hover,
+.custom-secondary-btn:hover {
+  transform: scale(1.03) translateY(-1rem);
+  -webkit-transform: scale(1.03) translateY(-1rem);
+}
+
+.text-primary-gradient {
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(248, 112, 85), #a3cef3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box__icon {
+  font-size: 4rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(248, 112, 85), #a3cef3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+
+
