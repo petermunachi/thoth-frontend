@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 type WrapperProps = {
-  bgColor: string;
+  bgColor: string | undefined;
+  borderRadius: string | undefined;
 }
 
 type Props = {
   children: any;
-  backgroundColor: string;
+  backgroundColor?: string;
+  borderRadius?: string;
 }
 
 const Wrapper = styled.section<WrapperProps>`
@@ -15,6 +17,7 @@ const Wrapper = styled.section<WrapperProps>`
   transition: 0.3s;
   padding: 2rem;
   background-color: ${({bgColor}) => bgColor || "#fff"};
+  border-radius: ${({ borderRadius }) => borderRadius || "none"};
   
   :hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -22,10 +25,10 @@ const Wrapper = styled.section<WrapperProps>`
 
 `;
 
-const Card: React.FC<Props> = ({ backgroundColor, children }) => {
+const Card: React.FC<Props> = ({ backgroundColor, borderRadius, children }) => {
 
   return(
-    <Wrapper bgColor={backgroundColor}>
+    <Wrapper borderRadius={borderRadius} bgColor={backgroundColor}>
       {children}
     </Wrapper>
               

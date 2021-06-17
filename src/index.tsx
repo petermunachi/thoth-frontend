@@ -4,8 +4,9 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/css/icons.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './assets/css/index.css';
+import './assets/css/utilities.css';
 import './assets/css/responsive.css';
 
 ReactDOM.render(

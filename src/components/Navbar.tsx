@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useLocation } from "react-router-dom";
-import { primaryColor, primaryFont, secondaryColor, tertiaryColor } from '../utils/helpers';
+import { primaryColor, primaryFont, tertiaryColor } from '../utils/helpers';
 
 const Wrapper = styled.header`
   padding: 1rem .10rem;

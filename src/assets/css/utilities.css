@@ -1,0 +1,39 @@
+.bg-gray {
+  background-color: #ededed5c;
+}
+
+.border-circle {
+  border-radius: 50%;
+}
+
+.text-primary-gradient {
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(248, 112, 85), #a3cef3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.center-div {
+  margin: 0 auto;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.mt-8rem{
+  margin-top: 8rem;
+}
+
+.font-2{
+  font-size: 2rem;
+}
+
+.font-4{
+  font-size: 4rem;
+}
+
+.w-5 {
+  width: 5rem;
+}

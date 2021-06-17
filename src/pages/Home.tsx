@@ -1,14 +1,16 @@
 import React from 'react';
 
 import Layout from "../components/Layout";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Clients from "../components/Clients";
 import Features from "../components/Features";
 import Airdrop from "../components/Airdrop";
+import Tokenomics from "../components/Tokenomics";
+import RoadMap from "../components/RoadMap";
+import Communities from "../components/Communities";
 import styled from 'styled-components';
-import BgBanner from "../assets/img/bg-banner.png";
+import BgBanner from "../assets/img/bg-banner-2.png";
 
 
 const Wrapper = styled.section`
@@ -40,8 +42,12 @@ const Home = () => {
 
         <Features />
         <Airdrop />
+        <Tokenomics />
+
+        <RoadMap />
+        
+        <Communities />
   
-        <Footer />
       </div>
     </Layout>
   )

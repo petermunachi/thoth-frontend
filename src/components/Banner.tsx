@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import BannerImg from '../assets/img/illustration-6.svg';
-import { secondaryColor } from '../utils/helpers';
+import { secondaryColor, tertiaryColor } from '../utils/helpers';
 
 
 const Wrapper = styled.div`
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   }
 
   p {
-    color: rgba(0,0,0,.9);
+    color: ${tertiaryColor};
     font-size: 1.1rem;
     text-align: justify;
     padding: .8rem 0;
