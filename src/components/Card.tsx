@@ -23,6 +23,10 @@ const Wrapper = styled.section<WrapperProps>`
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
+  @media only screen and (max-width: 56.25em) {
+    padding: 1rem;
+  }
+
 `;
 
 const Card: React.FC<Props> = ({ backgroundColor, borderRadius, children }) => {

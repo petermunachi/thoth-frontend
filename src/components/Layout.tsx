@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ScrollArrow from './ScrollArrow';
+
 
 type Props = {
   title: string;
@@ -11,7 +13,10 @@ const Layout: React.FC<Props> = ({ title, children }) => {
 
   return(
     <>
-      <main>{children}</main>
+      <main>
+        {children}
+        <ScrollArrow />
+      </main>
     </>
   )
     

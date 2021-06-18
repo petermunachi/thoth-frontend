@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { tertiaryColor, primaryColor, secondaryColor } from '../utils/helpers';
+import { tertiaryColor, primaryColor } from '../utils/helpers';
 
 const Wrapper = styled.section`
   
@@ -15,6 +15,22 @@ const Wrapper = styled.section`
     font-size: 1rem;
     padding: 1rem .5rem;
     font-weight: 500;
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    table th {
+      font-size: 1.1rem;
+      padding: 1rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    td {
+      color: ${tertiaryColor};
+      font-size: .9rem;
+      padding: .5rem;
+      font-weight: 500;
+    }
   }
 `;
 

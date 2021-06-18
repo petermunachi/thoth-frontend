@@ -8,7 +8,7 @@ const TokenomicsFeaturesBox = () => {
   return (
     <>
       <div className="col-md-4">
-        <div className="">
+        <div className="white-space-nowrap">
           <DoubleBorderCard width="90%">
             <div className="d-flex align-items-center">
               <h4 className="tokenomics_icon">
@@ -16,7 +16,7 @@ const TokenomicsFeaturesBox = () => {
               </h4>
               <div className="text-container">
                 <h3 className="">Max Supply</h3>
-                <p>THT Tokens : 510,000,000 THT</p>
+                <p>THT Tokens : 510,000,000</p>
               </div>
             </div>
           </DoubleBorderCard>
@@ -24,7 +24,7 @@ const TokenomicsFeaturesBox = () => {
       </div>
 
       <div className="col-md-4">
-        <div className="">
+        <div className="white-space-nowrap">
           <DoubleBorderCard width="90%">
             <div className="d-flex align-items-center">
               <h4 className="tokenomics_icon">
@@ -40,7 +40,7 @@ const TokenomicsFeaturesBox = () => {
       </div>
 
       <div className="col-md-4">
-        <div className="">
+        <div className="white-space-nowrap">
           <DoubleBorderCard width="90%">
             <div className="d-flex align-items-center">
               <h4 className="tokenomics_icon">

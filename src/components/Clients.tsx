@@ -1,12 +1,18 @@
 import React from "react";
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper.min.css';
 
 import JulswapLogo from '../assets/partners-img/logo-julswap.png';
 import InchLogo from '../assets/partners-img/logo-inch.png';
 import CointelegraphLogo from '../assets/partners-img/logo-cointelegraph.png';
 import PancakeswapLogo from '../assets/partners-img/logo-pancakeswap.png';
+
+// import Swiper core and required modules
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
 
 const Wrapper = styled.section`
 
@@ -17,6 +23,8 @@ const Wrapper = styled.section`
     width: 60%;
   }
 `
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const Clients = () => {
   return (
@@ -27,6 +35,7 @@ const Clients = () => {
           spaceBetween={50}
           slidesPerView={4}
           autoplay={true}
+          loop={true}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints = {{
@@ -35,7 +44,7 @@ const Clients = () => {
               spaceBetween: 20
             },
             480: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 30
             },
             640: {
@@ -56,14 +65,15 @@ const Clients = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="img-container">
-              <img src={InchLogo} width="100%" height="100%" alt="" data-aos="zoom-in" data-aos-delay="500" />
+              <img src={InchLogo} width="100%" height="100%" alt="Inch Logo" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="img-container">
-              <img src={PancakeswapLogo} width="100%" height="100%" alt="" data-aos="zoom-in" data-aos-delay="500" />
+              <img src={PancakeswapLogo} width="100%" height="100%" alt="Pancakeswap Logo" />
             </div>
           </SwiperSlide>
+
         </Swiper>
         
   

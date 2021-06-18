@@ -5,7 +5,6 @@ import { getTimeRemaining, tertiaryColor } from '../utils/helpers';
 import BgBannerRotate from "../assets/img/bg-banner-rotate.png";
 import { secondaryColor, blueColor } from '../utils/helpers';
 import Card from "./Card";
-import Layout from "./Layout";
 
 
 const Wrapper = styled.section`
@@ -13,6 +12,7 @@ const Wrapper = styled.section`
   background-size: cover;
   background-position: top;
   padding: 2rem .10rem 5rem .10rem;
+  background-repeat: no-repeat;
 
   h1 {
     text-transform: capitalize;
@@ -22,11 +22,12 @@ const Wrapper = styled.section`
   }
 
   .countdown-container {
-    margin: 2rem;
+    margin-bottom: 2rem;
   }
 
   .countdown-container div {
     border: 1px solid #0e0e3c;
+    margin: 0 auto;
   }
 
   ul {
@@ -58,6 +59,66 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
 
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 2rem .10rem 0rem .10rem;
+
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .countdown-container {
+      margin: .2rem;
+      text-align: center;
+    }
+
+    .countdown-container .p-4 {
+      padding: .8rem !important;
+      font-size: 1rem;
+    }
+
+    .countdown-container small {
+      font-size: .7rem;
+    }
+
+    .countdown-container .w-5 {
+      width: 3rem;
+    }
+
+    .countdown-text {
+      font-size: 1rem;
+    }
+
+    .buttons-container {
+      display: block;
+
+    }
+
+    .buttons-container .airdrop-btn-container {
+      margin-left: 0;
+    }
+
+    .buttons-container a, .buttons-container button {
+      display: block;
+      text-align: center;
+
+    }
+
+    .buttons-container button {
+      width: 100%;
+    }
+
+    .buttons-container div {
+      margin-bottom: .7rem;
+    }
+
+  }
+
 `
 const Airdrop = () => {
 
@@ -87,104 +148,108 @@ const Airdrop = () => {
 
 
   return (
-    <Layout title="Claim Airdrop">
 
-      <Wrapper>
-  
-        <div id="airdrop" className="airdrop">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-md-6">
-                <h1 className="">Steps To Join THT Token Airdrop </h1>
-                <div className="mt-5">
-                  <ul>
-                    <li>
-                      <h5>Follow Our Twitter Channel</h5>
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor. 
-                      </p>
-                    </li>
-                    <li>
-                      <h5>Join Telegram Group And Channel</h5>
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor.
-                      </p>
-                    </li>
-                    <li>
-                      <h5>Fill Our Google Form</h5>
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                
+    <Wrapper>
+
+      <div id="airdrop" className="airdrop">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h1 className="">Steps To Join THT Token Airdrop </h1>
+              <div className="mt-5">
+                <ul>
+                  <li>
+                    <h5>Follow Our Twitter Channel</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor. 
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Join Telegram Group And Channel</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor.
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Fill Our Google Form</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia adipisci facilis optio ratione nostrum quo eius dolor.
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <div className="col-md-6">
-    
-                <div className="p-3 pb-5">
-                  <Card backgroundColor={'#fff'}>
-                    <div className="d-flex align-items-center justify-content-center mt-4">
-        
-                      <div className="countdown-container text-center">
+              
+            </div>
+            <div className="col-md-6">
+  
+              <div className="p-3 pb-5 ">
+                <Card backgroundColor={'#fff'}>
+                  <div className="row align-items-center  text-center">
+
+                    <div className="col-3">
+                      <div className="countdown-container">
                         <div className="bg-gray border-circle text-dark border-radius-10 w-5" >
                           <h4 className="p-4 text-center text-primary-gradient font-weight-bold">{days}</h4>
                         </div>
                         <small className="font-weight-bold text-primary-gradient h6 text-uppercase">Days</small>
                       </div>
-        
-                      <div className="countdown-container text-center">
+                    </div>
+
+                    <div className="col-3">
+                      <div className="countdown-container">
                         <div className="bg-gray border-circle text-dark border-radius-10 w-5" >
                           <h4 className="p-4 text-center text-primary-gradient font-weight-bold">{hours}</h4>
                         </div>
                         <small className="font-weight-bold text-primary-gradient h6 text-uppercase">Hours</small>
                       </div>
-        
-                      <div className="countdown-container text-center">
+                    </div>
+                    <div className="col-3">
+                      <div className="countdown-container">
                         <div className="bg-gray border-circle text-dark border-radius-10  w-5 ">
                           <h4 className="p-4 text-center text-primary-gradient font-weight-bold">{minutes}</h4>
                         </div>
                         <small className="font-weight-bold text-primary-gradient h6 text-uppercase">Minutes</small>
                       </div>
-        
-                      <div className="countdown-container text-center">
+                    </div>
+                    <div className="col-3">
+                      <div className="countdown-container">
                         <div className="bg-gray border-circle text-dark border-radius-10 w-5" >
                           <h4 className="p-4 text-center text-primary-gradient font-weight-bold">{seconds}</h4>
                         </div>
                         <small className="font-weight-bold text-primary-gradient h6 text-uppercase">Seconds</small>
                       </div>
-        
                     </div>
+
+                  </div>
                   
-                    <div className="center-div">
-                      <h5 className="text-center">
-                        The countdown of airdrop and token Sale before listing on Pancakeswap
-                      </h5>
-  
-                      <div className="py-3 d-flex justify-content-evenly">
-                        <div className="">
-                          <button className="custom-primary-btn">Claim Airdrop</button>
-                        </div>
-                        <div className="ml-2">
-                          <Link to="/app" className="custom-tertiary-btn">Join the Thoth Token ICO</Link>
-                        </div>
+                  <div className="center-div">
+                    <h5 className="text-center countdown-text">
+                      The countdown of airdrop and token Sale before listing on Pancakeswap
+                    </h5>
+
+                    <div className="py-3 buttons-container">
+                      <div className="">
+                        <button className="custom-primary-btn">Claim Airdrop</button>
                       </div>
-                      
-        
+                      <div className="ml-2">
+                        <Link to="/app" className="custom-tertiary-btn">Join the Thoth Token ICO</Link>
+                      </div>
                     </div>
-                  </Card>
-                </div>
-              
+                    
+      
+                  </div>
+                </Card>
               </div>
+            
             </div>
           </div>
-    
-    
         </div>
-        
-      </Wrapper>
+  
+  
+      </div>
       
-    </Layout>
+    </Wrapper>
+    
    );
 }
  

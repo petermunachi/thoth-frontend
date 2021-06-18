@@ -1,5 +1,3 @@
-import React from 'react'
-
 
 export const primaryColor = 'rgb(248, 112, 85)';
 export const secondaryColor = '#0e0e3c';

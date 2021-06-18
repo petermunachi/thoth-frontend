@@ -1,31 +1,10 @@
-@media only screen and (max-width: 56.25em) {
-  .roadmap-box {
-    padding: 2rem;
-  }
 
-  .h-25rem {
-    height: 20rem;
-  }
+  @media only screen and (max-width: 56.25em) {
 
-  .countdown-container {
-    margin: .5rem !important;
+    .custom-primary-btn,
+    .custom-secondary-btn,
+    .custom-tertiary-btn {
+      padding: .9rem 2rem .6rem 2rem;
+      font-size: 17px;
+    }
   }
-
-  .countdown-container .p-4 {
-    padding: 1rem !important;
-  }
-
-  .countdown-container .w-5 {
-    width: 4rem !important;
-  }
-
-  .center-div {
-    width: 98% !important;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .roadmap-box {
-    padding: 1rem
-  }
-}

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import DoubleBorderCard from './DoubleBorderCard';
-import Layout from './Layout';
 import { primaryColor, secondaryColor, tertiaryColor } from '../utils/helpers';
 import BgBannerRotate from "../assets/img/bg-banner-rotate.png";
 
@@ -11,6 +10,7 @@ const Wrapper = styled.div`
   padding-top: 1rem;
   padding-bottom: 5rem;
   background-image: url(${BgBannerRotate});
+  background-repeat: no-repeat;
 
   small {
     color: ${tertiaryColor};
@@ -19,6 +19,23 @@ const Wrapper = styled.div`
   .roadmap-box h1 {
     color: ${primaryColor};
   }
+
+  @media only screen and (max-width: 56.25em) {
+    padding-bottom: 0;
+
+    .roadmap .col-md-3, .roadmap .col-md-4 {
+      margin-bottom: 2rem;
+    }
+
+    .row-container {
+      width: 95%;
+    }
+    .roadmap-box {
+      padding: 0;
+    }
+  }
+
+
 
 `;
 const HeaderWrapper = styled.div`
@@ -38,6 +55,16 @@ const HeaderWrapper = styled.div`
     font-size: 2.3rem;
   }
 
+  @media only screen and (max-width: 56.25em) {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+    small {
+      font-size: 1rem;
+    }
+  }
 
   
  
@@ -45,17 +72,17 @@ const HeaderWrapper = styled.div`
 
 const RoadMap = () => {
   return (
-    <Layout title="Roadmap">
 
-      <Wrapper>
-        <section id="roadmap" className="roadmap">
-          <div className="container">
-            <HeaderWrapper>
-              <small>Our short and long term goals</small>
-              <h1 className="text-primary-gradient">Our RoadMap</h1>
-            </HeaderWrapper>
+    <Wrapper>
+      <section id="roadmap" className="roadmap">
+        <div className="container">
+          <HeaderWrapper>
+            <small>Our short and long term goals</small>
+            <h1 className="text-primary-gradient">Our RoadMap</h1>
+          </HeaderWrapper>
+          <div className="row-container">
             <div className="row justify-content-center">
-              <div className="col-md-3 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+              <div className="col-md-3 col-sm-12">
                 <DoubleBorderCard>
                   
                   <div className="roadmap-box">
@@ -133,13 +160,15 @@ const RoadMap = () => {
               
     
             </div>
+          
+        
           </div>
-        </section>
-       
-      </Wrapper>
-    
-    
-    </Layout>
+        </div>
+      </section>
+      
+    </Wrapper>
+  
+  
   );
 }
 
