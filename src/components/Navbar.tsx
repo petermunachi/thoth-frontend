@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useLocation } from "react-router-dom";
-import { primaryColor, primaryFont, secondaryColor, tertiaryColor } from '../utils/helpers';
+import { primaryColor, secondaryColor, tertiaryColor } from '../utils/helpers';
 
 type WrapperProps = {
   toggleNavbar: boolean;
@@ -37,10 +37,11 @@ const Wrapper = styled.header<WrapperProps>`
     padding: 0 .7rem;
   }
   .navbar-list a, .navbar-list-sm a {
-    font-family: ${primaryFont};
     text-decoration: none;
     color: ${tertiaryColor};
     display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 
   .navbar-list a:hover, .navbar-list-sm a:hover {

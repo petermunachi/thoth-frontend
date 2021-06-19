@@ -5,8 +5,6 @@ export const tertiaryColor = 'rgba(0,0,0,.9)';
 export const blueColor = '#4ac4f3c2';
 export const bgLightgray = '#fbfbfb';
 
-export const primaryFont = "'Roboto Slab', serif";
-
 
 export function getTimeRemaining(endtime: string) {
   const currentDate = new Date().toString();  
