@@ -76,20 +76,33 @@ const Wrapper = styled.header<WrapperProps>`
     }
 
     .navbar-list-sm {
-      display: ${({ toggleNavbar }) =>
-        toggleNavbar
-          ? 'block'
-          : 'none'
-      };
       background: #fff;
       position: fixed;
-      width: 100%;
-      height: 100vh;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 1000;
-
+      transition: 0.3s;
+      height: ${({ toggleNavbar }) =>
+        toggleNavbar
+          ? '100%'
+          : '0'
+      };
+      width: ${({ toggleNavbar }) =>
+        toggleNavbar
+          ? '100%'
+          : '0'
+      };
+      opacity: ${({ toggleNavbar }) =>
+        toggleNavbar
+          ? '1'
+          : '0'
+      };
+      z-index: ${({ toggleNavbar }) =>
+        toggleNavbar
+          ? '1000'
+          : '0'
+      };
+      
     }
 
     .navbar-list-sm a {
@@ -123,6 +136,7 @@ const Wrapper = styled.header<WrapperProps>`
       border-bottom: 1px solid ${secondaryColor};
       text-align: right;
       font-weight: bold;
+      cursor: pointer;
     }
 
 

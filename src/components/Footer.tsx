@@ -88,6 +88,10 @@ const FooterWrapper = styled.footer`
 
 
 const Footer = () => {
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   return (
     <FooterWrapper>
 
@@ -135,7 +139,7 @@ const Footer = () => {
                     to="mailto:hello@thoth.finanace?subject=Contacting Thoth finance"
                     className="mail-text"
                   >
-                      hello@thoth.finanace
+                    hello@thoth.finanace
                   </Link>
                 </h6>
               </div>
@@ -143,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
       
-        <h3 className="text-center copyright-text">Thoth Finance, Copyright &copy; 2020. All Rights Reserved.</h3>
+        <h3 className="text-center copyright-text">Thoth Finance, Copyright &copy; {currentYear}. All Rights Reserved.</h3>
       </div>
 
     </FooterWrapper>

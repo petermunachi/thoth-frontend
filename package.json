@@ -2,6 +2,9 @@
   "name": "thoth-frontend",
   "version": "0.1.0",
   "private": true,
+  "description": "A decentralised gaming and staking platform",
+  "author": "Thoth Finance Team",
+  "homepage": "https://petermunachi.github.io/thoth-frontend/",
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.4",

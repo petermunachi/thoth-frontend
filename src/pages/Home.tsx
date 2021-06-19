@@ -119,7 +119,7 @@ const BannerWrapper = styled.div`
 
 
   }
-`
+`;
 const TokenomicsWrapper = styled.section`
   padding: 5rem 0;
 
@@ -190,6 +190,10 @@ const TokenomicsWrapper = styled.section`
 
     .tokenomics-box-container .col-md-4{
       margin-bottom: 2rem;
+    }
+
+    .tokenomics-box-container .col-md-4 section{
+      margin: 0 auto;
     }
 
     .docs-container {
@@ -314,14 +318,11 @@ const CommunitiesWrapper = styled.section`
     margin: 0 .8rem;
   }
 
-  .text-container-1 {
+  .text-container {
     display: flex;
     align-items: center
   }
 
-  .text-container-2 {
-    display: none;
-  }
 
   @media only screen and (max-width: 56.25em) {
     padding: 3rem 0;
@@ -347,14 +348,6 @@ const CommunitiesWrapper = styled.section`
       margin: 1rem 0 0 0;
     }
 
-    .text-container-2 {
-      display: flex;
-      align-items: center
-    }
-    
-    .text-container-1 {
-      display: none;
-    }
 
   }
 `;
@@ -398,11 +391,13 @@ const Home = () => {
           </BannerWrapper>
 
         </HeaderWrapper>
+        
         <>
           <Clients />
           <Features />
           <Airdrop />
         </>
+
         <TokenomicsWrapper>
           <div id="tokenomics" className="pt-4">
             <div className="container">
@@ -466,7 +461,6 @@ const Home = () => {
           </div>
         </TokenomicsWrapper>
 
-
         <RoadMap />
         
         <CommunitiesWrapper>
@@ -476,17 +470,6 @@ const Home = () => {
                 <div className="">
                   <h1>Join our Community</h1>
                   <p>Get help, join the conversation, and learn more about Thoth Finance.</p>
-
-                  <div className="text-container-1">
-                    <div className="">
-                      <Link to="/app" className="custom-primary-btn">Documentation</Link>
-                    </div>
-                    <div className="pdf-container">
-                      <Link to="/app" className="pdf-link">
-                        White Paper <i className="text-primary-gradient font-1 bi bi-file-pdf"></i>
-                      </Link>
-                    </div>
-                  </div>
 
                 </div>
               </div>
@@ -530,21 +513,20 @@ const Home = () => {
                     </li>
                   </ul>
                 </div>
-              
-              
-                <div className="text-container-2">
-                  <div className="">
-                    <Link to="/app" className="custom-primary-btn">Documentation</Link>
-                  </div>
-                  <div className="pdf-container">
-                    <Link to="/app" className="pdf-link">
-                      White Paper <i className="text-primary-gradient font-1 bi bi-file-pdf"></i>
-                    </Link>
-                  </div>
-                </div>
-
               </div>
             </div>
+
+            <div className="text-container">
+              <div className="">
+                <Link to="/app" className="custom-primary-btn">Documentation</Link>
+              </div>
+              <div className="pdf-container">
+                <Link to="/app" className="pdf-link">
+                  White Paper <i className="text-primary-gradient font-1 bi bi-file-pdf"></i>
+                </Link>
+              </div>
+            </div>
+            
           </div>
         </CommunitiesWrapper>
 
